@@ -150,3 +150,139 @@ Get-Process
    $array[$counter]
    $counter += 1
  } while($counter -lt $array.length) //aynı for loop do while ile yazılmış
+
+
+$x = 10
+if($x -le 20){
+   write-host("This is if statement")
+}
+
+$x = 30
+if($x -le 20){
+   write-host("This is if statement")
+}else {
+   write-host("This is else statement")
+}
+
+$x = 30
+if($x -eq 10){
+   write-host("Value of X is 10")
+} elseif($x -eq 20){
+   write-host("Value of X is 20")
+} elseif($x -eq 30){
+   write-host("Value of X is 30")
+} else {
+   write-host("This is else statement")
+}
+
+$x = 30
+$y = 10
+if($x -eq 30){     //nested if statement
+   if($y -eq 10) {
+      write-host("X = 30 and Y = 10")
+   }
+}   
+
+switch(3){
+   1 {"One"}
+   2 {"Two"}
+   3 {"Three"}
+   4 {"Four"}
+   3 {"Three Again"} //three three again
+}
+
+switch(3){ //three
+   1 {"One"}
+   2 {"Two"}
+   3 {"Three"; break }
+   4 {"Four"}
+   3 {"Three Again"}
+}
+
+switch(4,2){
+   1 {"One"}
+   2 {"Two"}
+   3 {"Three"; break }
+   4 {"Four"}
+   3 {"Three Again"}  //four two
+}
+
+[int32[]]$intA = 1500,2230,3350,4000
+$A = 1, 2, 3, 4
+$A.getType()
+
+$myList = 5.6, 4.5, 3.3, 13.2, 4.0, 34.33, 34.0, 45.45, 99.993, 11123
+
+write-host("Print all the array elements")
+$myList
+
+write-host("Get the length of array")
+$myList.Length
+
+write-host("Get Second element of array")
+$myList[1]
+
+write-host("Get partial array")
+$subList = $myList[1..3]
+
+write-host("print subList")
+$subList
+
+write-host("using for loop")
+for ($i = 0; $i -le ($myList.length - 1); $i += 1) {
+  $myList[$i]
+}
+
+write-host("using forEach Loop")
+foreach ($element in $myList) {
+  $element
+}
+
+write-host("using while Loop")
+$i = 0
+while($i -lt 4) {
+  $myList[$i];
+  $i++
+}
+
+write-host("Assign values")
+$myList[1] = 10
+$myList
+$myList = @(0..4)
+write-host("Print array")
+$myList
+$myList = @(0..4)
+write-host("Assign values")
+$myList[1]  = 10
+$myList
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
