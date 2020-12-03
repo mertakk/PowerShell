@@ -255,34 +255,3 @@ $myList = @(0..4)
 write-host("Assign values")
 $myList[1]  = 10
 $myList
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
